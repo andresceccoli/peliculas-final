@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.androidutn.peliculas.PeliculaActivity">
+
+    <ImageView
+        android:id="@+id/pelicula_poster"
+        android:layout_width="120dp"
+        android:layout_height="160dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/movie" />
+
+    <TextView
+        android:id="@+id/pelicula_titulo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="0dp"
+        android:text="Transformers"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toRightOf="@+id/pelicula_poster"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/pelicula_poster" />
+
+    <RatingBar
+        android:id="@+id/pelicula_rating"
+        style="@style/Widget.AppCompat.RatingBar.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        android:layout_marginLeft="0dp"
+        app:layout_constraintLeft_toLeftOf="@+id/pelicula_titulo"
+        android:layout_marginTop="4dp"
+        app:layout_constraintTop_toBottomOf="@+id/pelicula_fecha" />
+
+    <TextView
+        android:id="@+id/pelicula_rating_valor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="0dp"
+        android:text="3.8"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        app:layout_constraintLeft_toRightOf="@+id/pelicula_rating"
+        app:layout_constraintTop_toTopOf="@+id/pelicula_rating" />
+
+    <TextView
+        android:id="@+id/pelicula_resumen"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="4dp"
+        android:text="When the menace known as the Joker emerges from his mysterious past, he wreaks havoc and chaos on the people of Gotham, the Dark Knight must accept one of the greatest psychological and physical tests of his ability to fight injustice."
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="@+id/pelicula_rating"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pelicula_rating" />
+
+    <TextView
+        android:id="@+id/pelicula_fecha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="4dp"
+        android:text="2007"
+        app:layout_constraintLeft_toLeftOf="@+id/pelicula_titulo"
+        app:layout_constraintTop_toBottomOf="@+id/pelicula_titulo" />
+
+    <TextView
+        android:id="@+id/label_idioma"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="24dp"
+        android:text="Idioma"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pelicula_poster" />
+
+    <TextView
+        android:id="@+id/pelicula_idioma"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="4dp"
+        android:text="Inglés"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintLeft_toLeftOf="@+id/label_idioma"
+        app:layout_constraintTop_toBottomOf="@+id/label_idioma" />
+
+    <TextView
+        android:id="@+id/label_duracion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Duración"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        android:layout_marginLeft="0dp"
+        app:layout_constraintLeft_toLeftOf="@+id/label_idioma"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/pelicula_idioma" />
+
+    <TextView
+        android:id="@+id/pelicula_duracion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="4dp"
+        android:text="128 mins"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintLeft_toLeftOf="@+id/label_duracion"
+        app:layout_constraintTop_toBottomOf="@+id/label_duracion" />
+
+    <Button
+        android:id="@+id/pelicula_trailer"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:text="Ver Trailer"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/pelicula_duracion"
+        app:layout_constraintHorizontal_bias="0.497" />
+</android.support.constraint.ConstraintLayout>
